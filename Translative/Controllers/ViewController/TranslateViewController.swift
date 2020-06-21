@@ -14,6 +14,8 @@ class TranslateViewController: UIViewController {
     @IBOutlet weak var destTextField: UITextView!
     @IBOutlet weak var loadingProgress: UIProgressView!
     
+    var indexOfLangGroup: Int!
+    var indexOfCard: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,15 @@ class TranslateViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        
+        if indexOfLangGroup != nil && indexOfCard != nil {
+            sourceTextField.text = fakeDB[indexOfLangGroup].cards[indexOfCard].userText
+            destTextField.text = fakeDB[indexOfLangGroup].cards[indexOfCard].translatedText
+        }
+    }
 
     /*
     // MARK: - Navigation

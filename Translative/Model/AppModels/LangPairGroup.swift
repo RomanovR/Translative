@@ -13,9 +13,9 @@ struct LangPairGroup {
     var cards: [Card]
 }
 // MARK: - Temporary singleton for prototype app. Waiting for removal.
-let english = Language(name: "English", shortName: "En", code: 1033)
-let russian = Language(name: "Russian", shortName: "Ru", code: 1049)
-let german = Language(name: "German", shortName: "De", code: 1031)
+let english = Language(name: "English", shortName: "En", code: 1033, nationalFlag: "🇬🇧")
+let russian = Language(name: "Russian", shortName: "Ru", code: 1049, nationalFlag: "🇷🇺")
+let german = Language(name: "German", shortName: "De", code: 1031, nationalFlag: "🇩🇪")
 
 let availableLanguages = ["en":english, "ru":russian, "de":german]
 

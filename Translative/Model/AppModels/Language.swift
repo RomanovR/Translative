@@ -12,6 +12,7 @@ struct Language: Equatable {
     let name: String
     let shortName: String?
     let code: UInt?
+    let nationalFlag: String?
     
     static func == (lhs: Language, rhs: Language) -> Bool {
         return lhs.name.lowercased() == rhs.name.lowercased() ? true : false

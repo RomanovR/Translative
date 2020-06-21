@@ -9,10 +9,11 @@
 import UIKit
 
 class CardsTableViewController: UITableViewController {
+    var indexOfLangGroup: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(fakeDB[indexOfLangGroup].cards)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -20,27 +21,38 @@ class CardsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//
+//    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return fakeDB[indexOfLangGroup].cards.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
         // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CardCell", for: indexPath)
+        if let titleOfCard = fakeDB[indexOfLangGroup].cards[indexPath.row].title {
+            cell.textLabel?.text = titleOfCard
+        }
+        else{
+            cell.textLabel?.alpha = 0.7
+            cell.textLabel?.text = "Empty card"
+        }
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -77,14 +89,26 @@ class CardsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "goToTranslate" {
+            // Здесь объектом sender является ячейка, на которую нажимает юзер
+            // Получаем indexPath выбранной ячейки с помощью метода indexPathForCell:
+            let indexPath = self.tableView.indexPath(for: (sender as! UITableViewCell))
+            
+            // Получаем контроллер, на который юзер попадёт с этим segue
+            let translateVC: TranslateViewController = segue.destination as! TranslateViewController
+            
+            // Передаём двойной индекс нажатой карточки.
+            translateVC.indexOfLangGroup = indexOfLangGroup
+            translateVC.indexOfCard = indexPath?.row
+        }
     }
-    */
+    
 
 }
