@@ -42,7 +42,7 @@ class CardsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Configure the cell...
         let cell = tableView.dequeueReusableCell(withIdentifier: "CardCell", for: indexPath)
-        if let titleOfCard = fakeDB[indexOfLangGroup].cards[indexPath.row].title {
+        if let titleOfCard = fakeDB[indexOfLangGroup].cards[indexPath.row].userText {
             cell.textLabel?.text = titleOfCard
         }
         else{
