@@ -16,6 +16,7 @@
 		E28536E4249926F900873378 /* CardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28536E3249926F900873378 /* CardsTableViewController.swift */; };
 		E28536E624992AFD00873378 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28536E524992AFD00873378 /* MainTableViewCell.swift */; };
 		E28536E824992B5700873378 /* CardsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28536E724992B5700873378 /* CardsTableViewCell.swift */; };
+		E2B4BC6424A27000004919D6 /* GoogleModelTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4BC6324A27000004919D6 /* GoogleModelTemp.swift */; };
 		E2E980FE2494CA9500A4B88C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E980FD2494CA9500A4B88C /* AppDelegate.swift */; };
 		E2E981032494CA9500A4B88C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2E981012494CA9500A4B88C /* Main.storyboard */; };
 		E2E981052494CAA200A4B88C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E981042494CAA200A4B88C /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		E28536E3249926F900873378 /* CardsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsTableViewController.swift; sourceTree = "<group>"; };
 		E28536E524992AFD00873378 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		E28536E724992B5700873378 /* CardsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsTableViewCell.swift; sourceTree = "<group>"; };
+		E2B4BC6324A27000004919D6 /* GoogleModelTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleModelTemp.swift; sourceTree = "<group>"; };
 		E2E980FA2494CA9500A4B88C /* Translative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E980FD2494CA9500A4B88C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2E981022494CA9500A4B88C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				E27C6E42249BF44300B449F8 /* LangPair.swift */,
 				E27C6E40249BF3DB00B449F8 /* LangPairGroup.swift */,
 				E27C6E3C249BD80300B449F8 /* Card.swift */,
+				E2B4BC6324A27000004919D6 /* GoogleModelTemp.swift */,
 			);
 			path = AppModels;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				E28536E824992B5700873378 /* CardsTableViewCell.swift in Sources */,
 				E27C6E41249BF3DB00B449F8 /* LangPairGroup.swift in Sources */,
 				E28536E4249926F900873378 /* CardsTableViewController.swift in Sources */,
+				E2B4BC6424A27000004919D6 /* GoogleModelTemp.swift in Sources */,
 				E27C6E3B249BD07F00B449F8 /* Language.swift in Sources */,
 				E27C6E43249BF44300B449F8 /* LangPair.swift in Sources */,
 				E28536E2249926C700873378 /* TranslateViewController.swift in Sources */,
