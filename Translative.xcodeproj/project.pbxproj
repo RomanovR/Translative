@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E23D09AA24A6621500FE18CF /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D09A924A6621500FE18CF /* EndPointType.swift */; };
+		E23D09AC24A6634400FE18CF /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D09AB24A6634400FE18CF /* HTTPMethod.swift */; };
+		E23D09AE24A6642500FE18CF /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D09AD24A6642500FE18CF /* HTTPTask.swift */; };
+		E23D09B024A666CA00FE18CF /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D09AF24A666CA00FE18CF /* ParameterEncoding.swift */; };
+		E23D09B224A6698F00FE18CF /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D09B124A6698F00FE18CF /* URLParameterEncoder.swift */; };
+		E23D09B424A66E9700FE18CF /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D09B324A66E9700FE18CF /* JSONParameterEncoder.swift */; };
+		E23D09B624A66FC500FE18CF /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D09B524A66FC500FE18CF /* NetworkRouter.swift */; };
+		E23D09B824A671FA00FE18CF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D09B724A671FA00FE18CF /* Router.swift */; };
 		E27C6E3B249BD07F00B449F8 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C6E3A249BD07F00B449F8 /* Language.swift */; };
 		E27C6E3D249BD80300B449F8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C6E3C249BD80300B449F8 /* Card.swift */; };
 		E27C6E41249BF3DB00B449F8 /* LangPairGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C6E40249BF3DB00B449F8 /* LangPairGroup.swift */; };
@@ -24,6 +32,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E23D09A924A6621500FE18CF /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		E23D09AB24A6634400FE18CF /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		E23D09AD24A6642500FE18CF /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		E23D09AF24A666CA00FE18CF /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		E23D09B124A6698F00FE18CF /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		E23D09B324A66E9700FE18CF /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		E23D09B524A66FC500FE18CF /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		E23D09B724A671FA00FE18CF /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		E27C6E3A249BD07F00B449F8 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		E27C6E3C249BD80300B449F8 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		E27C6E40249BF3DB00B449F8 /* LangPairGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangPairGroup.swift; sourceTree = "<group>"; };
@@ -53,6 +69,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E23D09A524A6619100FE18CF /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		E23D09A624A661AF00FE18CF /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		E23D09A724A661CA00FE18CF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E23D09A924A6621500FE18CF /* EndPointType.swift */,
+				E23D09AD24A6642500FE18CF /* HTTPTask.swift */,
+				E23D09AB24A6634400FE18CF /* HTTPMethod.swift */,
+				E23D09B524A66FC500FE18CF /* NetworkRouter.swift */,
+				E23D09B724A671FA00FE18CF /* Router.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E23D09A824A661D100FE18CF /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				E23D09AF24A666CA00FE18CF /* ParameterEncoding.swift */,
+				E23D09B124A6698F00FE18CF /* URLParameterEncoder.swift */,
+				E23D09B324A66E9700FE18CF /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
 		E27C6E3E249BD82C00B449F8 /* AppModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +156,10 @@
 		E28536B82497E46100873378 /* NetworkController */ = {
 			isa = PBXGroup;
 			children = (
+				E23D09A524A6619100FE18CF /* EndPoint */,
+				E23D09A624A661AF00FE18CF /* Manager */,
+				E23D09A724A661CA00FE18CF /* Service */,
+				E23D09A824A661D100FE18CF /* Encoding */,
 			);
 			path = NetworkController;
 			sourceTree = "<group>";
@@ -226,17 +282,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E23D09AE24A6642500FE18CF /* HTTPTask.swift in Sources */,
 				E28536E02499267700873378 /* MainTableViewController.swift in Sources */,
 				E28536E824992B5700873378 /* CardsTableViewCell.swift in Sources */,
 				E27C6E41249BF3DB00B449F8 /* LangPairGroup.swift in Sources */,
 				E28536E4249926F900873378 /* CardsTableViewController.swift in Sources */,
 				E2B4BC6424A27000004919D6 /* GoogleModelTemp.swift in Sources */,
+				E23D09B824A671FA00FE18CF /* Router.swift in Sources */,
 				E27C6E3B249BD07F00B449F8 /* Language.swift in Sources */,
 				E27C6E43249BF44300B449F8 /* LangPair.swift in Sources */,
+				E23D09B224A6698F00FE18CF /* URLParameterEncoder.swift in Sources */,
 				E28536E2249926C700873378 /* TranslateViewController.swift in Sources */,
+				E23D09AA24A6621500FE18CF /* EndPointType.swift in Sources */,
 				E2E980FE2494CA9500A4B88C /* AppDelegate.swift in Sources */,
+				E23D09AC24A6634400FE18CF /* HTTPMethod.swift in Sources */,
+				E23D09B024A666CA00FE18CF /* ParameterEncoding.swift in Sources */,
+				E23D09B424A66E9700FE18CF /* JSONParameterEncoder.swift in Sources */,
 				E28536E624992AFD00873378 /* MainTableViewCell.swift in Sources */,
 				E27C6E3D249BD80300B449F8 /* Card.swift in Sources */,
+				E23D09B624A66FC500FE18CF /* NetworkRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
