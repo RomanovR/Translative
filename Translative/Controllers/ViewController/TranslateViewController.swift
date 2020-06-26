@@ -32,6 +32,7 @@ class TranslateViewController: UIViewController {
             destTextField.text = fakeDB[indexOfLangGroup].cards[indexOfCard].translatedText
         }
     }
+    
 
     /*
     // MARK: - Navigation

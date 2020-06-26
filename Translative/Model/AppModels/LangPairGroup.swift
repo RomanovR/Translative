@@ -22,6 +22,8 @@ let availableLanguages = ["en":english, "ru":russian, "de":german]
 let enru = LangPair(sourceLang: english, destLang: russian)
 let ende = LangPair(sourceLang: english, destLang: german)
 
+
+let emptyCard = Card(userText: "", translatedText: "")
 let userCard = Card(userText: "Eat", translatedText: "Есть")
 let anotherUserCard = Card(userText: "Съешь же ещё этих мягких французских булок, да выпей чаю.", translatedText: "Eat these soft French rolls and drink some tea.")
 let enruUserCard = Card(userText: """
@@ -36,7 +38,7 @@ Yeah, I can’t see where you comin' from But I know just what you runnin' from:
 """)
 let germanUserCard = Card(userText: "German", translatedText: "Deutsch")
 
-var enruGroup = LangPairGroup(pair: enru, cards: [userCard, somesomeUserCard, anotherUserCard, enruUserCard])
+var enruGroup = LangPairGroup(pair: enru, cards: [emptyCard, userCard, somesomeUserCard, anotherUserCard, enruUserCard])
 var endeGroup = LangPairGroup(pair: ende, cards: [germanUserCard])
 
 var fakeDB = [enruGroup, endeGroup]
