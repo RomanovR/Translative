@@ -15,6 +15,7 @@
 		E23D09B424A66E9700FE18CF /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D09B324A66E9700FE18CF /* JSONParameterEncoder.swift */; };
 		E23D09B624A66FC500FE18CF /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D09B524A66FC500FE18CF /* NetworkRouter.swift */; };
 		E23D09B824A671FA00FE18CF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D09B724A671FA00FE18CF /* Router.swift */; };
+		E23D09BA24A6FD4300FE18CF /* GoogleCloudTranslationEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D09B924A6FD4300FE18CF /* GoogleCloudTranslationEndPoint.swift */; };
 		E27C6E3B249BD07F00B449F8 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C6E3A249BD07F00B449F8 /* Language.swift */; };
 		E27C6E3D249BD80300B449F8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C6E3C249BD80300B449F8 /* Card.swift */; };
 		E27C6E41249BF3DB00B449F8 /* LangPairGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C6E40249BF3DB00B449F8 /* LangPairGroup.swift */; };
@@ -40,6 +41,7 @@
 		E23D09B324A66E9700FE18CF /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
 		E23D09B524A66FC500FE18CF /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		E23D09B724A671FA00FE18CF /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		E23D09B924A6FD4300FE18CF /* GoogleCloudTranslationEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleCloudTranslationEndPoint.swift; sourceTree = "<group>"; };
 		E27C6E3A249BD07F00B449F8 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		E27C6E3C249BD80300B449F8 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		E27C6E40249BF3DB00B449F8 /* LangPairGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangPairGroup.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 		E23D09A524A6619100FE18CF /* EndPoint */ = {
 			isa = PBXGroup;
 			children = (
+				E23D09B924A6FD4300FE18CF /* GoogleCloudTranslationEndPoint.swift */,
 			);
 			path = EndPoint;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				E2E980FE2494CA9500A4B88C /* AppDelegate.swift in Sources */,
 				E23D09AC24A6634400FE18CF /* HTTPMethod.swift in Sources */,
 				E23D09B024A666CA00FE18CF /* ParameterEncoding.swift in Sources */,
+				E23D09BA24A6FD4300FE18CF /* GoogleCloudTranslationEndPoint.swift in Sources */,
 				E23D09B424A66E9700FE18CF /* JSONParameterEncoder.swift in Sources */,
 				E28536E624992AFD00873378 /* MainTableViewCell.swift in Sources */,
 				E27C6E3D249BD80300B449F8 /* Card.swift in Sources */,
