@@ -8,6 +8,10 @@
 
 import Foundation
 
+// MARK: - Get rid of Any type if possible.
+/**
+Get rid of Any type if possible.
+*/
 public typealias Parameters = [String:Any]
 
 public enum NetworkError: String, Error {
