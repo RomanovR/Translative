@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias Languages = [String:Language]
+
 struct Language: Equatable {
     let name: String
     let shortName: String?
@@ -18,4 +20,3 @@ struct Language: Equatable {
         return lhs.name.lowercased() == rhs.name.lowercased() ? true : false
     }
 }
-
