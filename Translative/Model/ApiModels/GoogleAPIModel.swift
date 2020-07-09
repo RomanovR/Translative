@@ -22,7 +22,7 @@ extension GoogleApiResponse {
 //    }
 
     init(data: Data) throws {
-        self = try newJSONDecoder().decode(GoogleApiResponse.self, from: data)
+        self = try JSONDecoder().decode(GoogleApiResponse.self, from: data)
     }
 }
 
@@ -33,7 +33,7 @@ struct DataClass: Decodable {
 
 extension DataClass {
     init(data: Data) throws {
-        self = try newJSONDecoder().decode(DataClass.self, from: data)
+        self = try JSONDecoder().decode(DataClass.self, from: data)
     }
 }
 
@@ -45,17 +45,17 @@ struct Translation: Decodable {
 
 extension Translation {
     init(data: Data) throws {
-        self = try newJSONDecoder().decode(Translation.self, from: data)
+        self = try JSONDecoder().decode(Translation.self, from: data)
     }
 }
 
 // MARK: - Helper functions for creating decoders
 
-func newJSONDecoder() -> JSONDecoder {
-    let decoder = JSONDecoder()
-    if #available(iOS 10.0, OSX 10.12, tvOS 10.0, watchOS 3.0, *) {
-        decoder.dateDecodingStrategy = .iso8601
-    }
-    return decoder
-}
+//func newJSONDecoder() -> JSONDecoder {
+//    let decoder = JSONDecoder()
+//    if #available(iOS 10.0, OSX 10.12, tvOS 10.0, watchOS 3.0, *) {
+//        decoder.dateDecodingStrategy = .iso8601
+//    }
+//    return decoder
+//}
 

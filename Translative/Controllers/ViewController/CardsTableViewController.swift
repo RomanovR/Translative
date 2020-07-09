@@ -13,7 +13,7 @@ class CardsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(fakeDB[indexOfLangGroup].cards)
+        //print(fakeDB[indexOfLangGroup].cards)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

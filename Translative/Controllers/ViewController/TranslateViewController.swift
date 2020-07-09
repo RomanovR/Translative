@@ -13,13 +13,15 @@ class TranslateViewController: UIViewController {
     @IBOutlet weak var sourceTextField: UITextView!
     @IBOutlet weak var destTextField: UITextView!
     @IBOutlet weak var loadingProgress: UIProgressView!
-    
+
+    var networkManager: NetworkManager!
+
     var indexOfLangGroup: Int!
     var indexOfCard: Int!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.networkManager = NetworkManager()
         // Do any additional setup after loading the view.
     }
     
@@ -29,10 +31,19 @@ class TranslateViewController: UIViewController {
         
         if indexOfLangGroup != nil && indexOfCard != nil {
             sourceTextField.text = fakeDB[indexOfLangGroup].cards[indexOfCard].userText
-            destTextField.text = fakeDB[indexOfLangGroup].cards[indexOfCard].translatedText
+
+            networkManager.getTranslation(quote: sourceTextField.text, source: .ru, target: .en) { translatedQuote, error in
+                if let error = error {
+                    print(error)
+                }
+                if let translatedQuote = translatedQuote {
+                    print(translatedQuote.translatedText)
+                }
+            }
+
+            //destTextField.text = fakeDB[indexOfLangGroup].cards[indexOfCard].translatedText
         }
     }
-    
 
     /*
     // MARK: - Navigation
