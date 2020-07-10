@@ -32,12 +32,12 @@ class TranslateViewController: UIViewController {
         if indexOfLangGroup != nil && indexOfCard != nil {
             sourceTextField.text = fakeDB[indexOfLangGroup].cards[indexOfCard].userText
 
-            networkManager.getTranslation(quote: sourceTextField.text, source: .ru, target: .en) { translatedQuote, error in
+            networkManager.getTranslation(quote: "Hello world", source: .en, target: .ru) { translatedQuote, error in
                 if let error = error {
                     print(error)
                 }
                 if let translatedQuote = translatedQuote {
-                    print(translatedQuote.translatedText)
+                    print(translatedQuote)
                 }
             }
 

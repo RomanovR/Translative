@@ -19,6 +19,7 @@
 		E23D09BC24A762CB00FE18CF /* GoogleAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D09BB24A762CB00FE18CF /* GoogleAPIModel.swift */; };
 		E23D09BE24A768DD00FE18CF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D09BD24A768DD00FE18CF /* NetworkManager.swift */; };
 		E23D09C124A88D7300FE18CF /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D09C024A88D7300FE18CF /* Keys.swift */; };
+		E2496AA024B8C48600764219 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2496A9F24B8C48600764219 /* NetworkLogger.swift */; };
 		E27C6E3B249BD07F00B449F8 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C6E3A249BD07F00B449F8 /* Languages.swift */; };
 		E27C6E3D249BD80300B449F8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C6E3C249BD80300B449F8 /* Card.swift */; };
 		E27C6E41249BF3DB00B449F8 /* LangPairGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C6E40249BF3DB00B449F8 /* LangPairGroup.swift */; };
@@ -47,6 +48,7 @@
 		E23D09BB24A762CB00FE18CF /* GoogleAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAPIModel.swift; sourceTree = "<group>"; };
 		E23D09BD24A768DD00FE18CF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E23D09C024A88D7300FE18CF /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		E2496A9F24B8C48600764219 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		E27C6E3A249BD07F00B449F8 /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		E27C6E3C249BD80300B449F8 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		E27C6E40249BF3DB00B449F8 /* LangPairGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangPairGroup.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				E23D09AB24A6634400FE18CF /* HTTPMethod.swift */,
 				E23D09B524A66FC500FE18CF /* NetworkRouter.swift */,
 				E23D09B724A671FA00FE18CF /* Router.swift */,
+				E2496A9F24B8C48600764219 /* NetworkLogger.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				E23D09B424A66E9700FE18CF /* JSONParameterEncoder.swift in Sources */,
 				E28536E624992AFD00873378 /* MainTableViewCell.swift in Sources */,
 				E27C6E3D249BD80300B449F8 /* Card.swift in Sources */,
+				E2496AA024B8C48600764219 /* NetworkLogger.swift in Sources */,
 				E23D09B624A66FC500FE18CF /* NetworkRouter.swift in Sources */,
 				E23D09BC24A762CB00FE18CF /* GoogleAPIModel.swift in Sources */,
 			);
