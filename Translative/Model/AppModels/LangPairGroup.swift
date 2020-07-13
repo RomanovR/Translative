@@ -13,9 +13,9 @@ struct LangPairGroup {
     var cards: [Card]
 }
 // MARK: - Temporary singleton for prototype app. Waiting for removal.
-let english = Language(name: "English", shortName: "En", code: 1033, nationalFlag: "🇬🇧")
-let russian = Language(name: "Russian", shortName: "Ru", code: 1049, nationalFlag: "🇷🇺")
-let german = Language(name: "German", shortName: "De", code: 1031, nationalFlag: "🇩🇪")
+let english = Language(name: "English", shortName: .en, code: 1033, nationalFlag: "🇬🇧")
+let russian = Language(name: "Russian", shortName: .ru, code: 1049, nationalFlag: "🇷🇺")
+let german = Language(name: "German", shortName: .de, code: 1031, nationalFlag: "🇩🇪")
 
 let availableLanguages = ["en":english, "ru":russian, "de":german]
 
@@ -25,7 +25,7 @@ let ende = LangPair(sourceLang: english, destLang: german)
 
 let emptyCard = Card(userText: "", translatedText: "")
 let userCard = Card(userText: "Eat", translatedText: "Есть")
-let anotherUserCard = Card(userText: "Съешь же ещё этих мягких французских булок, да выпей чаю.", translatedText: "Eat these soft French rolls and drink some tea.")
+let anotherUserCard = Card(userText: "Eat these soft French rolls and drink some tea.", translatedText: "")
 let enruUserCard = Card(userText: """
 A table view displays a single column of vertically scrolling content, divided into rows and sections. Each row of a table displays a single piece of information related to your app. Sections let you group related rows together. For example, the Contacts app uses a table to display the names of the user's contacts.
 """, translatedText: """

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TranslateViewController: UIViewController {
+class TranslateViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var sourceTextField: UITextView!
     @IBOutlet weak var destTextField: UITextView!
@@ -21,6 +21,7 @@ class TranslateViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        sourceTextField.delegate = self
         self.networkManager = NetworkManager()
         // Do any additional setup after loading the view.
     }
@@ -30,20 +31,43 @@ class TranslateViewController: UIViewController {
         super.viewWillAppear(animated)
         
         if indexOfLangGroup != nil && indexOfCard != nil {
-            sourceTextField.text = fakeDB[indexOfLangGroup].cards[indexOfCard].userText
-
-            networkManager.getTranslation(quote: "Hello world", source: .en, target: .ru) { translatedQuote, error in
-                if let error = error {
-                    print(error)
-                }
-                if let translatedQuote = translatedQuote {
-                    print(translatedQuote)
-                }
-            }
-
-            //destTextField.text = fakeDB[indexOfLangGroup].cards[indexOfCard].translatedText
+            updateTextFields()
         }
     }
+
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            saveUserText()
+            getTranslateToDB()
+            updateTextFields()
+            sourceTextField.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+
+    func saveUserText(){
+        fakeDB[indexOfLangGroup].cards[indexOfCard].userText = sourceTextField.text
+    }
+
+    func updateTextFields(){
+        sourceTextField.text = fakeDB[indexOfLangGroup].cards[indexOfCard].userText
+        destTextField.text = fakeDB[indexOfLangGroup].cards[indexOfCard].translatedText
+    }
+
+    func getTranslateToDB() {
+        networkManager.getTranslation(quote: sourceTextField.text, source: fakeDB[indexOfLangGroup].pair.sourceLang.shortName, target: fakeDB[indexOfLangGroup].pair.destLang.shortName) { translatedQuote, error in
+            if let error = error {
+                print(error)
+            }
+            if let translatedQuote = translatedQuote {
+                print(translatedQuote)
+                fakeDB[self.indexOfLangGroup].cards[self.indexOfCard].translatedText = translatedQuote.translatedText
+            }
+        }
+    }
+
+
 
     /*
     // MARK: - Navigation

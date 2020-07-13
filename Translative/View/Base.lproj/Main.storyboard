@@ -115,7 +115,7 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="WLU-vR-ESj"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="zx6-qf-Tq5" userLabel="Translation loading">
                                         <rect key="frame" x="0.0" y="37" width="343" height="2"/>
@@ -127,7 +127,7 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="I7r-GT-j7B"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                                 <constraints>
