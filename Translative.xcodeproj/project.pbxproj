@@ -30,7 +30,6 @@
 		E28536E4249926F900873378 /* CardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28536E3249926F900873378 /* CardsTableViewController.swift */; };
 		E28536E624992AFD00873378 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28536E524992AFD00873378 /* MainTableViewCell.swift */; };
 		E28536E824992B5700873378 /* CardsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28536E724992B5700873378 /* CardsTableViewCell.swift */; };
-		E2A9D01D24BCC4F20029CCBA /* TranslativeTemp.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = E2A9D01C24BCC4F20029CCBA /* TranslativeTemp.xcdatamodel */; };
 		E2E980FE2494CA9500A4B88C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E980FD2494CA9500A4B88C /* AppDelegate.swift */; };
 		E2E981032494CA9500A4B88C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2E981012494CA9500A4B88C /* Main.storyboard */; };
 		E2E981052494CAA200A4B88C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E981042494CAA200A4B88C /* Assets.xcassets */; };
@@ -61,7 +60,6 @@
 		E28536E3249926F900873378 /* CardsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsTableViewController.swift; sourceTree = "<group>"; };
 		E28536E524992AFD00873378 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		E28536E724992B5700873378 /* CardsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsTableViewCell.swift; sourceTree = "<group>"; };
-		E2A9D01C24BCC4F20029CCBA /* TranslativeTemp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TranslativeTemp.xcdatamodel; sourceTree = "<group>"; };
 		E2E980FA2494CA9500A4B88C /* Translative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E980FD2494CA9500A4B88C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2E981022494CA9500A4B88C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 		E243863524C4B03D0082965C /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				E2A9D01C24BCC4F20029CCBA /* TranslativeTemp.xcdatamodel */,
 				E281DC1F24CD6D880052F2B2 /* Translative.xcdatamodeld */,
 			);
 			path = "Core Data";
@@ -330,7 +327,6 @@
 				E28536E2249926C700873378 /* TranslateViewController.swift in Sources */,
 				E23D09AA24A6621500FE18CF /* EndPointType.swift in Sources */,
 				E2E980FE2494CA9500A4B88C /* AppDelegate.swift in Sources */,
-				E2A9D01D24BCC4F20029CCBA /* TranslativeTemp.xcdatamodel in Sources */,
 				E23D09AC24A6634400FE18CF /* HTTPMethod.swift in Sources */,
 				E23D09B024A666CA00FE18CF /* ParameterEncoding.swift in Sources */,
 				E23D09C124A88D7300FE18CF /* Keys.swift in Sources */,

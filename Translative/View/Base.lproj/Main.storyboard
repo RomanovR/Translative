@@ -47,7 +47,9 @@
                             <outlet property="delegate" destination="eDK-6e-YXF" id="cPH-vY-Xo3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Translative" id="1Me-25-Kst"/>
+                    <navigationItem key="navigationItem" title="Translative" id="1Me-25-Kst">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Zzm-7r-rdS"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cuf-ga-D30" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
