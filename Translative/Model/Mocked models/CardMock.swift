@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Card {
+struct CardMock {
     // MARK: - User request for translation.
     var title: String? {
         get {

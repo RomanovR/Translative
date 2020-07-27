@@ -39,8 +39,8 @@ struct NetworkManager {
     }
 
     func getTranslation(quote: String,
-                        source: LanguageCode,
-                        target: LanguageCode,
+                        source: LanguageCodeMock,
+                        target: LanguageCodeMock,
                         completion: @escaping (_ translatedQuote: Translation?, _ error: String?)->()) {
 
         router.request(.translate(quote: quote, target: target, format: .text, source: source, model: .base)) { data, response, error in

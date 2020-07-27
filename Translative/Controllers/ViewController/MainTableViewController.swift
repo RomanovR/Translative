@@ -44,7 +44,7 @@ class MainTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // MARK: - Получаем языковые пары пользователя и настраиваем ячейки.
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath)
-        let group: LangPairGroup = fakeDB[indexPath.row]
+        let group: LangPairGroupMock = fakeDB[indexPath.row]
         cell.textLabel?.text = group.pair.sourceLang.nationalFlag! + group.pair.sourceLang.name + " ⇄ " + group.pair.destLang.name + group.pair.destLang.nationalFlag!
 
         return cell

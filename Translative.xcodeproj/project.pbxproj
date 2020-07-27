@@ -20,15 +20,17 @@
 		E23D09BE24A768DD00FE18CF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D09BD24A768DD00FE18CF /* NetworkManager.swift */; };
 		E23D09C124A88D7300FE18CF /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D09C024A88D7300FE18CF /* Keys.swift */; };
 		E2496AA024B8C48600764219 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2496A9F24B8C48600764219 /* NetworkLogger.swift */; };
-		E27C6E3B249BD07F00B449F8 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C6E3A249BD07F00B449F8 /* Languages.swift */; };
-		E27C6E3D249BD80300B449F8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C6E3C249BD80300B449F8 /* Card.swift */; };
-		E27C6E41249BF3DB00B449F8 /* LangPairGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C6E40249BF3DB00B449F8 /* LangPairGroup.swift */; };
-		E27C6E43249BF44300B449F8 /* LangPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C6E42249BF44300B449F8 /* LangPair.swift */; };
+		E27C6E3B249BD07F00B449F8 /* LanguagesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C6E3A249BD07F00B449F8 /* LanguagesMock.swift */; };
+		E27C6E3D249BD80300B449F8 /* CardMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C6E3C249BD80300B449F8 /* CardMock.swift */; };
+		E27C6E41249BF3DB00B449F8 /* LangPairGroupMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C6E40249BF3DB00B449F8 /* LangPairGroupMock.swift */; };
+		E27C6E43249BF44300B449F8 /* LangPairMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C6E42249BF44300B449F8 /* LangPairMock.swift */; };
+		E281DC2124CD6D880052F2B2 /* Translative.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E281DC1F24CD6D880052F2B2 /* Translative.xcdatamodeld */; };
 		E28536E02499267700873378 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28536DF2499267700873378 /* MainTableViewController.swift */; };
 		E28536E2249926C700873378 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28536E1249926C700873378 /* TranslateViewController.swift */; };
 		E28536E4249926F900873378 /* CardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28536E3249926F900873378 /* CardsTableViewController.swift */; };
 		E28536E624992AFD00873378 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28536E524992AFD00873378 /* MainTableViewCell.swift */; };
 		E28536E824992B5700873378 /* CardsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28536E724992B5700873378 /* CardsTableViewCell.swift */; };
+		E2A9D01D24BCC4F20029CCBA /* TranslativeTemp.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = E2A9D01C24BCC4F20029CCBA /* TranslativeTemp.xcdatamodel */; };
 		E2E980FE2494CA9500A4B88C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E980FD2494CA9500A4B88C /* AppDelegate.swift */; };
 		E2E981032494CA9500A4B88C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2E981012494CA9500A4B88C /* Main.storyboard */; };
 		E2E981052494CAA200A4B88C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E981042494CAA200A4B88C /* Assets.xcassets */; };
@@ -49,15 +51,17 @@
 		E23D09BD24A768DD00FE18CF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E23D09C024A88D7300FE18CF /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		E2496A9F24B8C48600764219 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
-		E27C6E3A249BD07F00B449F8 /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
-		E27C6E3C249BD80300B449F8 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		E27C6E40249BF3DB00B449F8 /* LangPairGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangPairGroup.swift; sourceTree = "<group>"; };
-		E27C6E42249BF44300B449F8 /* LangPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangPair.swift; sourceTree = "<group>"; };
+		E27C6E3A249BD07F00B449F8 /* LanguagesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesMock.swift; sourceTree = "<group>"; };
+		E27C6E3C249BD80300B449F8 /* CardMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMock.swift; sourceTree = "<group>"; };
+		E27C6E40249BF3DB00B449F8 /* LangPairGroupMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangPairGroupMock.swift; sourceTree = "<group>"; };
+		E27C6E42249BF44300B449F8 /* LangPairMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangPairMock.swift; sourceTree = "<group>"; };
+		E281DC2024CD6D880052F2B2 /* Translative.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Translative.xcdatamodel; sourceTree = "<group>"; };
 		E28536DF2499267700873378 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		E28536E1249926C700873378 /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 		E28536E3249926F900873378 /* CardsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsTableViewController.swift; sourceTree = "<group>"; };
 		E28536E524992AFD00873378 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		E28536E724992B5700873378 /* CardsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsTableViewCell.swift; sourceTree = "<group>"; };
+		E2A9D01C24BCC4F20029CCBA /* TranslativeTemp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TranslativeTemp.xcdatamodel; sourceTree = "<group>"; };
 		E2E980FA2494CA9500A4B88C /* Translative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E980FD2494CA9500A4B88C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2E981022494CA9500A4B88C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -124,15 +128,24 @@
 			path = Keys;
 			sourceTree = "<group>";
 		};
-		E27C6E3E249BD82C00B449F8 /* AppModels */ = {
+		E243863524C4B03D0082965C /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				E27C6E3A249BD07F00B449F8 /* Languages.swift */,
-				E27C6E42249BF44300B449F8 /* LangPair.swift */,
-				E27C6E40249BF3DB00B449F8 /* LangPairGroup.swift */,
-				E27C6E3C249BD80300B449F8 /* Card.swift */,
+				E2A9D01C24BCC4F20029CCBA /* TranslativeTemp.xcdatamodel */,
+				E281DC1F24CD6D880052F2B2 /* Translative.xcdatamodeld */,
 			);
-			path = AppModels;
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		E243863624C4B0690082965C /* Mocked models */ = {
+			isa = PBXGroup;
+			children = (
+				E27C6E3A249BD07F00B449F8 /* LanguagesMock.swift */,
+				E27C6E42249BF44300B449F8 /* LangPairMock.swift */,
+				E27C6E40249BF3DB00B449F8 /* LangPairGroupMock.swift */,
+				E27C6E3C249BD80300B449F8 /* CardMock.swift */,
+			);
+			path = "Mocked models";
 			sourceTree = "<group>";
 		};
 		E27C6E3F249BD9FA00B449F8 /* ApiModels */ = {
@@ -146,10 +159,11 @@
 		E28536B52497CB2500873378 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E243863524C4B03D0082965C /* Core Data */,
 				E23D09BF24A88D2C00FE18CF /* Keys */,
 				E27C6E3F249BD9FA00B449F8 /* ApiModels */,
 				E2E981042494CAA200A4B88C /* Assets.xcassets */,
-				E27C6E3E249BD82C00B449F8 /* AppModels */,
+				E243863624C4B0690082965C /* Mocked models */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,26 +316,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E281DC2124CD6D880052F2B2 /* Translative.xcdatamodeld in Sources */,
 				E23D09AE24A6642500FE18CF /* HTTPTask.swift in Sources */,
 				E28536E02499267700873378 /* MainTableViewController.swift in Sources */,
 				E28536E824992B5700873378 /* CardsTableViewCell.swift in Sources */,
 				E23D09BE24A768DD00FE18CF /* NetworkManager.swift in Sources */,
-				E27C6E41249BF3DB00B449F8 /* LangPairGroup.swift in Sources */,
+				E27C6E41249BF3DB00B449F8 /* LangPairGroupMock.swift in Sources */,
 				E28536E4249926F900873378 /* CardsTableViewController.swift in Sources */,
 				E23D09B824A671FA00FE18CF /* Router.swift in Sources */,
-				E27C6E3B249BD07F00B449F8 /* Languages.swift in Sources */,
-				E27C6E43249BF44300B449F8 /* LangPair.swift in Sources */,
+				E27C6E3B249BD07F00B449F8 /* LanguagesMock.swift in Sources */,
+				E27C6E43249BF44300B449F8 /* LangPairMock.swift in Sources */,
 				E23D09B224A6698F00FE18CF /* URLParameterEncoder.swift in Sources */,
 				E28536E2249926C700873378 /* TranslateViewController.swift in Sources */,
 				E23D09AA24A6621500FE18CF /* EndPointType.swift in Sources */,
 				E2E980FE2494CA9500A4B88C /* AppDelegate.swift in Sources */,
+				E2A9D01D24BCC4F20029CCBA /* TranslativeTemp.xcdatamodel in Sources */,
 				E23D09AC24A6634400FE18CF /* HTTPMethod.swift in Sources */,
 				E23D09B024A666CA00FE18CF /* ParameterEncoding.swift in Sources */,
 				E23D09C124A88D7300FE18CF /* Keys.swift in Sources */,
 				E23D09BA24A6FD4300FE18CF /* GoogleCloudTranslationEndPoint.swift in Sources */,
 				E23D09B424A66E9700FE18CF /* JSONParameterEncoder.swift in Sources */,
 				E28536E624992AFD00873378 /* MainTableViewCell.swift in Sources */,
-				E27C6E3D249BD80300B449F8 /* Card.swift in Sources */,
+				E27C6E3D249BD80300B449F8 /* CardMock.swift in Sources */,
 				E2496AA024B8C48600764219 /* NetworkLogger.swift in Sources */,
 				E23D09B624A66FC500FE18CF /* NetworkRouter.swift in Sources */,
 				E23D09BC24A762CB00FE18CF /* GoogleAPIModel.swift in Sources */,
@@ -524,6 +540,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E281DC1F24CD6D880052F2B2 /* Translative.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E281DC2024CD6D880052F2B2 /* Translative.xcdatamodel */,
+			);
+			currentVersion = E281DC2024CD6D880052F2B2 /* Translative.xcdatamodel */;
+			path = Translative.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E2E980F22494CA9500A4B88C /* Project object */;
 }

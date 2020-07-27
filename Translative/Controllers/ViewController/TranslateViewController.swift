@@ -39,7 +39,6 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
         if text == "\n" {
             saveUserText()
             getTranslateToDB()
-            updateTextFields()
             sourceTextField.resignFirstResponder()
             return false
         }

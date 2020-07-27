@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct LangPair: Equatable {
-    let sourceLang: Language
-    let destLang: Language
+struct LangPairMock: Equatable {
+    let sourceLang: LanguageMock
+    let destLang: LanguageMock
 }

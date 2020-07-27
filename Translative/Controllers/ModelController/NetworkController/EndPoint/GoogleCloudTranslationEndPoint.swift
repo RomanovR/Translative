@@ -37,15 +37,15 @@ public enum GoogleApi {
 
     case translate(
         quote: String,
-        target: LanguageCode,
+        target: LanguageCodeMock,
         format: FormatParameters?,
-        source: LanguageCode?,
+        source: LanguageCodeMock?,
         model: ModelParameters?)
 
     case detect(quote: String)
 
     case languageSupport(
-        target: LanguageCode,
+        target: LanguageCodeMock,
         model: ModelParameters?)
 
     // place for v3 methods.

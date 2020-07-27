@@ -8,13 +8,13 @@
 
 import Foundation
 
-typealias Languages = [String:Language]
+typealias LanguagesMock = [String:LanguageMock]
 
 /**
  Temporary enum for languages.
  Need to be rewritten for extended language storage.
  */
-public enum LanguageCode: String {
+public enum LanguageCodeMock: String {
     case en = "en"
     case ru = "ru"
     case uk = "uk"
@@ -32,13 +32,13 @@ public enum LanguageCode: String {
     case fi = "fi"
 }
 
-struct Language: Equatable {
+struct LanguageMock: Equatable {
     let name: String
-    let shortName: LanguageCode
+    let shortName: LanguageCodeMock
     let code: UInt?
     let nationalFlag: String?
     
-    static func == (lhs: Language, rhs: Language) -> Bool {
+    static func == (lhs: LanguageMock, rhs: LanguageMock) -> Bool {
         return lhs.name.lowercased() == rhs.name.lowercased() ? true : false
     }
 }
