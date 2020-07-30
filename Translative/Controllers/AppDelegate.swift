@@ -17,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let defaults = UserDefaults.standard
+        if defaults.bool(forKey: "isSecondLaunch") {
+//            print("Не первый запуск приложения :)")
+        } else {
+            defaults.set(true, forKey: "isSecondLaunch")
+//            print("Первый запуск приложения")
+        }
+
         return true
     }
 
