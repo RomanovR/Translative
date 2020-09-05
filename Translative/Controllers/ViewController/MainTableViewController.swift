@@ -7,11 +7,20 @@
 //
 
 import UIKit
+import CoreData
 
 class MainTableViewController: UITableViewController {
-    
+
+    var container: NSPersistentContainer!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        guard container != nil else {
+            fatalError("This view needs a persistent container!")
+        }
+        // The persistent container is available.
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -92,21 +101,18 @@ class MainTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "goToCards" {
-            // Здесь объектом sender является ячейка, на которую нажимает юзер
+        if let cardsVC = segue.destination as? CardsTableViewController {
+            // Здесь объектом sender является ячейка, на которую нажимает пользователь.
+
+            // Передаём ссылку на постоянное хранилище.
+            cardsVC.container = container
+
             // Получаем indexPath выбранной ячейки с помощью метода indexPathForCell:
             let indexPath = self.tableView.indexPath(for: (sender as! UITableViewCell))
-            
-            // Получаем языковую пару под тем же индексом, что и индекс нажатой ячейки.
-            //let group = fakeDB[indexPath!.row]
-            
-            // Получаем контроллер, на который юзер попадёт с этим segue
-            let cardsVC: CardsTableViewController = segue.destination as! CardsTableViewController
-            
+
             // Задаём атрибут Group в cardsVC
             cardsVC.indexOfLangGroup = indexPath?.row
         }
     }
-    
 
 }

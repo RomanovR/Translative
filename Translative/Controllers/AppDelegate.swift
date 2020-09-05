@@ -17,12 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
         let defaults = UserDefaults.standard
         if defaults.bool(forKey: "isSecondLaunch") {
 //            print("Не первый запуск приложения :)")
         } else {
             defaults.set(true, forKey: "isSecondLaunch")
 //            print("Первый запуск приложения")
+        }
+
+        // Part of setup a Core Data Stack.
+        if let rootVC = window?.rootViewController as? MainTableViewController {
+            rootVC.container = persistentContainer
         }
 
         return true
@@ -61,7 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
          */
-        let container = NSPersistentContainer(name: "Translative")
+        let container = NSPersistentContainer(name: "TranslativeModel")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
