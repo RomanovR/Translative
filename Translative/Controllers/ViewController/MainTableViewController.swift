@@ -19,6 +19,7 @@ class MainTableViewController: UITableViewController {
         guard container != nil else {
             fatalError("This view needs a persistent container!")
         }
+
         // The persistent container is available.
         
         // Uncomment the following line to preserve selection between presentations

@@ -31,6 +31,13 @@
 		E28536E624992AFD00873378 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28536E524992AFD00873378 /* MainTableViewCell.swift */; };
 		E28536E824992B5700873378 /* CardsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28536E724992B5700873378 /* CardsTableViewCell.swift */; };
 		E287F5782502067A007A7BC6 /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287F5772502067A007A7BC6 /* PersistentContainer.swift */; };
+		E2D08942250733A300FBC6CE /* UserCard+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D0893C250733A300FBC6CE /* UserCard+CoreDataClass.swift */; };
+		E2D08943250733A300FBC6CE /* UserCard+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D0893D250733A300FBC6CE /* UserCard+CoreDataProperties.swift */; };
+		E2D08944250733A300FBC6CE /* Language+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D0893E250733A300FBC6CE /* Language+CoreDataClass.swift */; };
+		E2D08945250733A300FBC6CE /* Language+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D0893F250733A300FBC6CE /* Language+CoreDataProperties.swift */; };
+		E2D08946250733A300FBC6CE /* LanguagesPair+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D08940250733A300FBC6CE /* LanguagesPair+CoreDataClass.swift */; };
+		E2D08947250733A300FBC6CE /* LanguagesPair+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D08941250733A300FBC6CE /* LanguagesPair+CoreDataProperties.swift */; };
+		E2D0894925074D9900FBC6CE /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D0894825074D9900FBC6CE /* NavigationController.swift */; };
 		E2E980FE2494CA9500A4B88C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E980FD2494CA9500A4B88C /* AppDelegate.swift */; };
 		E2E981032494CA9500A4B88C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2E981012494CA9500A4B88C /* Main.storyboard */; };
 		E2E981052494CAA200A4B88C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E981042494CAA200A4B88C /* Assets.xcassets */; };
@@ -62,6 +69,13 @@
 		E28536E524992AFD00873378 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		E28536E724992B5700873378 /* CardsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsTableViewCell.swift; sourceTree = "<group>"; };
 		E287F5772502067A007A7BC6 /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
+		E2D0893C250733A300FBC6CE /* UserCard+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserCard+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E2D0893D250733A300FBC6CE /* UserCard+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserCard+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E2D0893E250733A300FBC6CE /* Language+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E2D0893F250733A300FBC6CE /* Language+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E2D08940250733A300FBC6CE /* LanguagesPair+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguagesPair+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E2D08941250733A300FBC6CE /* LanguagesPair+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguagesPair+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E2D0894825074D9900FBC6CE /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		E2E980FA2494CA9500A4B88C /* Translative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E980FD2494CA9500A4B88C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2E981022494CA9500A4B88C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -131,6 +145,12 @@
 		E243863524C4B03D0082965C /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				E2D0893C250733A300FBC6CE /* UserCard+CoreDataClass.swift */,
+				E2D0893D250733A300FBC6CE /* UserCard+CoreDataProperties.swift */,
+				E2D0893E250733A300FBC6CE /* Language+CoreDataClass.swift */,
+				E2D0893F250733A300FBC6CE /* Language+CoreDataProperties.swift */,
+				E2D08940250733A300FBC6CE /* LanguagesPair+CoreDataClass.swift */,
+				E2D08941250733A300FBC6CE /* LanguagesPair+CoreDataProperties.swift */,
 				E281DC1F24CD6D880052F2B2 /* TranslativeModel.xcdatamodeld */,
 			);
 			path = "Core Data";
@@ -173,6 +193,7 @@
 				E28536B92497E4EB00873378 /* ModelController */,
 				E28536BA2497E4FC00873378 /* ViewController */,
 				E2E980FD2494CA9500A4B88C /* AppDelegate.swift */,
+				E2D0894825074D9900FBC6CE /* NavigationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -327,13 +348,17 @@
 				E281DC2124CD6D880052F2B2 /* TranslativeModel.xcdatamodeld in Sources */,
 				E23D09AE24A6642500FE18CF /* HTTPTask.swift in Sources */,
 				E28536E02499267700873378 /* MainTableViewController.swift in Sources */,
+				E2D08946250733A300FBC6CE /* LanguagesPair+CoreDataClass.swift in Sources */,
 				E28536E824992B5700873378 /* CardsTableViewCell.swift in Sources */,
 				E23D09BE24A768DD00FE18CF /* NetworkManager.swift in Sources */,
 				E27C6E41249BF3DB00B449F8 /* LangPairGroupMock.swift in Sources */,
 				E28536E4249926F900873378 /* CardsTableViewController.swift in Sources */,
 				E23D09B824A671FA00FE18CF /* Router.swift in Sources */,
+				E2D0894925074D9900FBC6CE /* NavigationController.swift in Sources */,
 				E27C6E3B249BD07F00B449F8 /* LanguagesMock.swift in Sources */,
 				E27C6E43249BF44300B449F8 /* LangPairMock.swift in Sources */,
+				E2D08942250733A300FBC6CE /* UserCard+CoreDataClass.swift in Sources */,
+				E2D08943250733A300FBC6CE /* UserCard+CoreDataProperties.swift in Sources */,
 				E23D09B224A6698F00FE18CF /* URLParameterEncoder.swift in Sources */,
 				E28536E2249926C700873378 /* TranslateViewController.swift in Sources */,
 				E287F5782502067A007A7BC6 /* PersistentContainer.swift in Sources */,
@@ -341,6 +366,9 @@
 				E2E980FE2494CA9500A4B88C /* AppDelegate.swift in Sources */,
 				E23D09AC24A6634400FE18CF /* HTTPMethod.swift in Sources */,
 				E23D09B024A666CA00FE18CF /* ParameterEncoding.swift in Sources */,
+				E2D08947250733A300FBC6CE /* LanguagesPair+CoreDataProperties.swift in Sources */,
+				E2D08945250733A300FBC6CE /* Language+CoreDataProperties.swift in Sources */,
+				E2D08944250733A300FBC6CE /* Language+CoreDataClass.swift in Sources */,
 				E23D09C124A88D7300FE18CF /* Keys.swift in Sources */,
 				E23D09BA24A6FD4300FE18CF /* GoogleCloudTranslationEndPoint.swift in Sources */,
 				E23D09B424A66E9700FE18CF /* JSONParameterEncoder.swift in Sources */,

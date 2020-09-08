@@ -5,10 +5,12 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nationalFlag" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="shortName" attributeType="String" minValueString="2" maxValueString="2" syncable="YES"/>
+        <relationship name="destinationLanguagesPairs" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="LanguagesPair" inverseName="destinationLanguage" inverseEntity="LanguagesPair" syncable="YES"/>
+        <relationship name="sourceLanguagesPairs" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="LanguagesPair" inverseName="sourceLanguage" inverseEntity="LanguagesPair" syncable="YES"/>
     </entity>
     <entity name="LanguagesPair" representedClassName="LanguagesPair" syncable="YES">
-        <relationship name="destinationLanguage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Language" syncable="YES"/>
-        <relationship name="sourceLanguage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Language" syncable="YES"/>
+        <relationship name="destinationLanguage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Language" inverseName="destinationLanguagesPairs" inverseEntity="Language" syncable="YES"/>
+        <relationship name="sourceLanguage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Language" inverseName="sourceLanguagesPairs" inverseEntity="Language" syncable="YES"/>
         <relationship name="userCards" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="UserCard" inverseName="languagePair" inverseEntity="UserCard" syncable="YES"/>
     </entity>
     <entity name="UserCard" representedClassName="UserCard" syncable="YES">
@@ -17,7 +19,7 @@
         <relationship name="languagePair" optional="YES" maxCount="1" deletionRule="Deny" destinationEntity="LanguagesPair" inverseName="userCards" inverseEntity="LanguagesPair" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Language" positionX="31.64453125" positionY="18.0703125" width="128" height="105"/>
+        <element name="Language" positionX="-165.578125" positionY="-53.80078125" width="173.02734375" height="135"/>
         <element name="LanguagesPair" positionX="247.5859375" positionY="10.13671875" width="128" height="90"/>
         <element name="UserCard" positionX="430.37890625" positionY="-24.875" width="128" height="90"/>
     </elements>
