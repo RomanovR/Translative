@@ -14,17 +14,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    let coreDataModel = "TranslativeModel"
+
+    fileprivate let runCountNamespace = "runCount"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let defaults = UserDefaults.standard
-        if defaults.bool(forKey: "isSecondLaunch") {
-//            print("Не первый запуск приложения :)")
-        } else {
-            defaults.set(true, forKey: "isSecondLaunch")
-//            print("Первый запуск приложения")
+
+        // Part of setup a Core Data Stack.
+        if let rootVC = window?.rootViewController as? NavigationControllerPassingContainer {
+
+            rootVC.coreDataManager = CoreDataManager(persistentContainer: persistentContainer)
         }
 
+        handleRunCount()
         return true
     }
 
@@ -52,6 +55,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
 
+    /**
+     - Returns: Delegate of AppDelegate
+     */
+    func sharedInstance() -> AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
@@ -61,12 +71,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
          */
-        let container = NSPersistentContainer(name: "Translative")
+        let container = NSPersistentContainer(name: coreDataModel)
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-
                 /*
                  Typical reasons for an error here include:
                  * The parent directory does not exist, cannot be created, or disallows writing.
@@ -95,6 +104,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+
+    fileprivate func handleRunCount() {
+        let defaults = UserDefaults.standard
+
+        var runCount: Int = defaults.integer(forKey: runCountNamespace)
+
+        if(runCount == 0) {
+            print("First time app run, therefore importing data from local source...")
+        }
+
+        runCount += 1
+        defaults.set(runCount, forKey:runCountNamespace)
+        print("current runCount: \(runCount)")
     }
 
 }

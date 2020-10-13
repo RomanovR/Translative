@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import CoreData
 
 class CardsTableViewController: UITableViewController {
+
+    /// Постоянное хранилище Core Data.
+    var coreDataManager: CoreDataManager!
+    
     var indexOfLangGroup: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //print(fakeDB[indexOfLangGroup].cards)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -96,13 +102,16 @@ class CardsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "goToTranslate" {
+
+        if let translateVC = segue.destination as? TranslateViewController {
+            // Здесь объектом sender является ячейка, на которую нажимает пользователь.
+
+            // Передаём ссылку на постоянное хранилище.
+            translateVC.coreDataManager = coreDataManager
+
             // Здесь объектом sender является ячейка, на которую нажимает юзер
             // Получаем indexPath выбранной ячейки с помощью метода indexPathForCell:
             let indexPath = self.tableView.indexPath(for: (sender as! UITableViewCell))
-            
-            // Получаем контроллер, на который юзер попадёт с этим segue
-            let translateVC: TranslateViewController = segue.destination as! TranslateViewController
             
             // Передаём двойной индекс нажатой карточки.
             translateVC.indexOfLangGroup = indexOfLangGroup

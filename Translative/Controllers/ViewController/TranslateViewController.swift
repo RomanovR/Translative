@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import CoreData
 
 class TranslateViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var sourceTextField: UITextView!
     @IBOutlet weak var destTextField: UITextView!
     @IBOutlet weak var loadingProgress: UIProgressView!
+
+    /// Постоянное хранилище Core Data.
+    var coreDataManager: CoreDataManager!
 
     var networkManager: NetworkManager!
 

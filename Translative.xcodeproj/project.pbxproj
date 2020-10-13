@@ -24,12 +24,15 @@
 		E27C6E3D249BD80300B449F8 /* CardMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C6E3C249BD80300B449F8 /* CardMock.swift */; };
 		E27C6E41249BF3DB00B449F8 /* LangPairGroupMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C6E40249BF3DB00B449F8 /* LangPairGroupMock.swift */; };
 		E27C6E43249BF44300B449F8 /* LangPairMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C6E42249BF44300B449F8 /* LangPairMock.swift */; };
-		E281DC2124CD6D880052F2B2 /* Translative.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E281DC1F24CD6D880052F2B2 /* Translative.xcdatamodeld */; };
+		E281DC2124CD6D880052F2B2 /* TranslativeModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E281DC1F24CD6D880052F2B2 /* TranslativeModel.xcdatamodeld */; };
 		E28536E02499267700873378 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28536DF2499267700873378 /* MainTableViewController.swift */; };
 		E28536E2249926C700873378 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28536E1249926C700873378 /* TranslateViewController.swift */; };
 		E28536E4249926F900873378 /* CardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28536E3249926F900873378 /* CardsTableViewController.swift */; };
 		E28536E624992AFD00873378 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28536E524992AFD00873378 /* MainTableViewCell.swift */; };
 		E28536E824992B5700873378 /* CardsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28536E724992B5700873378 /* CardsTableViewCell.swift */; };
+		E287F5782502067A007A7BC6 /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E287F5772502067A007A7BC6 /* PersistentContainer.swift */; };
+		E2D0894925074D9900FBC6CE /* NavigationControllerPassingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D0894825074D9900FBC6CE /* NavigationControllerPassingContainer.swift */; };
+		E2D0895A2507CA2400FBC6CE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D089592507CA2400FBC6CE /* CoreDataManager.swift */; };
 		E2E980FE2494CA9500A4B88C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E980FD2494CA9500A4B88C /* AppDelegate.swift */; };
 		E2E981032494CA9500A4B88C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2E981012494CA9500A4B88C /* Main.storyboard */; };
 		E2E981052494CAA200A4B88C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E981042494CAA200A4B88C /* Assets.xcassets */; };
@@ -60,6 +63,10 @@
 		E28536E3249926F900873378 /* CardsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsTableViewController.swift; sourceTree = "<group>"; };
 		E28536E524992AFD00873378 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		E28536E724992B5700873378 /* CardsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsTableViewCell.swift; sourceTree = "<group>"; };
+		E287F5772502067A007A7BC6 /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
+		E2D0894825074D9900FBC6CE /* NavigationControllerPassingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerPassingContainer.swift; sourceTree = "<group>"; };
+		E2D089562507C31600FBC6CE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E2D089592507CA2400FBC6CE /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		E2E980FA2494CA9500A4B88C /* Translative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E980FD2494CA9500A4B88C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2E981022494CA9500A4B88C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -129,7 +136,7 @@
 		E243863524C4B03D0082965C /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				E281DC1F24CD6D880052F2B2 /* Translative.xcdatamodeld */,
+				E281DC1F24CD6D880052F2B2 /* TranslativeModel.xcdatamodeld */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -168,9 +175,10 @@
 		E28536B62497CB2C00873378 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E2E980FD2494CA9500A4B88C /* AppDelegate.swift */,
+				E28536B82497E46100873378 /* NetworkController */,
 				E28536B92497E4EB00873378 /* ModelController */,
 				E28536BA2497E4FC00873378 /* ViewController */,
-				E2E980FD2494CA9500A4B88C /* AppDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -198,7 +206,8 @@
 		E28536B92497E4EB00873378 /* ModelController */ = {
 			isa = PBXGroup;
 			children = (
-				E28536B82497E46100873378 /* NetworkController */,
+				E287F5772502067A007A7BC6 /* PersistentContainer.swift */,
+				E2D089592507CA2400FBC6CE /* CoreDataManager.swift */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";
@@ -206,13 +215,22 @@
 		E28536BA2497E4FC00873378 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				E287F576250138B6007A7BC6 /* ViewCells */,
 				E28536DF2499267700873378 /* MainTableViewController.swift */,
-				E28536E524992AFD00873378 /* MainTableViewCell.swift */,
 				E28536E1249926C700873378 /* TranslateViewController.swift */,
 				E28536E3249926F900873378 /* CardsTableViewController.swift */,
-				E28536E724992B5700873378 /* CardsTableViewCell.swift */,
+				E2D0894825074D9900FBC6CE /* NavigationControllerPassingContainer.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E287F576250138B6007A7BC6 /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				E28536E724992B5700873378 /* CardsTableViewCell.swift */,
+				E28536E524992AFD00873378 /* MainTableViewCell.swift */,
+			);
+			name = ViewCells;
 			sourceTree = "<group>";
 		};
 		E2E980F12494CA9500A4B88C = {
@@ -234,6 +252,7 @@
 		E2E980FC2494CA9500A4B88C /* Translative */ = {
 			isa = PBXGroup;
 			children = (
+				E2D089562507C31600FBC6CE /* README.md */,
 				E28536B62497CB2C00873378 /* Controllers */,
 				E28536B52497CB2500873378 /* Model */,
 				E28536B72497D34B00873378 /* View */,
@@ -313,7 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E281DC2124CD6D880052F2B2 /* Translative.xcdatamodeld in Sources */,
+				E281DC2124CD6D880052F2B2 /* TranslativeModel.xcdatamodeld in Sources */,
 				E23D09AE24A6642500FE18CF /* HTTPTask.swift in Sources */,
 				E28536E02499267700873378 /* MainTableViewController.swift in Sources */,
 				E28536E824992B5700873378 /* CardsTableViewCell.swift in Sources */,
@@ -321,11 +340,14 @@
 				E27C6E41249BF3DB00B449F8 /* LangPairGroupMock.swift in Sources */,
 				E28536E4249926F900873378 /* CardsTableViewController.swift in Sources */,
 				E23D09B824A671FA00FE18CF /* Router.swift in Sources */,
+				E2D0894925074D9900FBC6CE /* NavigationControllerPassingContainer.swift in Sources */,
 				E27C6E3B249BD07F00B449F8 /* LanguagesMock.swift in Sources */,
 				E27C6E43249BF44300B449F8 /* LangPairMock.swift in Sources */,
 				E23D09B224A6698F00FE18CF /* URLParameterEncoder.swift in Sources */,
 				E28536E2249926C700873378 /* TranslateViewController.swift in Sources */,
+				E287F5782502067A007A7BC6 /* PersistentContainer.swift in Sources */,
 				E23D09AA24A6621500FE18CF /* EndPointType.swift in Sources */,
+				E2D0895A2507CA2400FBC6CE /* CoreDataManager.swift in Sources */,
 				E2E980FE2494CA9500A4B88C /* AppDelegate.swift in Sources */,
 				E23D09AC24A6634400FE18CF /* HTTPMethod.swift in Sources */,
 				E23D09B024A666CA00FE18CF /* ParameterEncoding.swift in Sources */,
@@ -538,13 +560,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		E281DC1F24CD6D880052F2B2 /* Translative.xcdatamodeld */ = {
+		E281DC1F24CD6D880052F2B2 /* TranslativeModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				E281DC2024CD6D880052F2B2 /* Translative.xcdatamodel */,
 			);
 			currentVersion = E281DC2024CD6D880052F2B2 /* Translative.xcdatamodel */;
-			path = Translative.xcdatamodeld;
+			path = TranslativeModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

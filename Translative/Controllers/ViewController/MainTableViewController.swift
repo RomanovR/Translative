@@ -7,11 +7,21 @@
 //
 
 import UIKit
+import CoreData
 
 class MainTableViewController: UITableViewController {
-    
+
+    var coreDataManager: CoreDataManager!
+    var context: NSManagedObjectContext!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        guard coreDataManager != nil else {
+            fatalError("This view needs a coreDataManager!")
+        }
+
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -92,21 +102,18 @@ class MainTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "goToCards" {
-            // Здесь объектом sender является ячейка, на которую нажимает юзер
+        if let cardsVC = segue.destination as? CardsTableViewController {
+            // Здесь объектом sender является ячейка, на которую нажимает пользователь.
+
+            // Передаём ссылку на постоянное хранилище.
+            cardsVC.coreDataManager = coreDataManager
+
             // Получаем indexPath выбранной ячейки с помощью метода indexPathForCell:
             let indexPath = self.tableView.indexPath(for: (sender as! UITableViewCell))
-            
-            // Получаем языковую пару под тем же индексом, что и индекс нажатой ячейки.
-            //let group = fakeDB[indexPath!.row]
-            
-            // Получаем контроллер, на который юзер попадёт с этим segue
-            let cardsVC: CardsTableViewController = segue.destination as! CardsTableViewController
-            
+
             // Задаём атрибут Group в cardsVC
             cardsVC.indexOfLangGroup = indexPath?.row
         }
     }
-    
 
 }
