@@ -18,8 +18,8 @@
 		E23D09BA24A6FD4300FE18CF /* GoogleCloudTranslationEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D09B924A6FD4300FE18CF /* GoogleCloudTranslationEndPoint.swift */; };
 		E23D09BC24A762CB00FE18CF /* GoogleAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D09BB24A762CB00FE18CF /* GoogleAPIModel.swift */; };
 		E23D09BE24A768DD00FE18CF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D09BD24A768DD00FE18CF /* NetworkManager.swift */; };
-		E23D09C124A88D7300FE18CF /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23D09C024A88D7300FE18CF /* Keys.swift */; };
 		E2496AA024B8C48600764219 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2496A9F24B8C48600764219 /* NetworkLogger.swift */; };
+		E24A825825355E93008F22DE /* NetworkKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24A825725355E93008F22DE /* NetworkKeys.swift */; };
 		E27C6E3B249BD07F00B449F8 /* LanguagesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C6E3A249BD07F00B449F8 /* LanguagesMock.swift */; };
 		E27C6E3D249BD80300B449F8 /* CardMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C6E3C249BD80300B449F8 /* CardMock.swift */; };
 		E27C6E41249BF3DB00B449F8 /* LangPairGroupMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C6E40249BF3DB00B449F8 /* LangPairGroupMock.swift */; };
@@ -51,8 +51,8 @@
 		E23D09B924A6FD4300FE18CF /* GoogleCloudTranslationEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleCloudTranslationEndPoint.swift; sourceTree = "<group>"; };
 		E23D09BB24A762CB00FE18CF /* GoogleAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAPIModel.swift; sourceTree = "<group>"; };
 		E23D09BD24A768DD00FE18CF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		E23D09C024A88D7300FE18CF /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		E2496A9F24B8C48600764219 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		E24A825725355E93008F22DE /* NetworkKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkKeys.swift; sourceTree = "<group>"; };
 		E27C6E3A249BD07F00B449F8 /* LanguagesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesMock.swift; sourceTree = "<group>"; };
 		E27C6E3C249BD80300B449F8 /* CardMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMock.swift; sourceTree = "<group>"; };
 		E27C6E40249BF3DB00B449F8 /* LangPairGroupMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangPairGroupMock.swift; sourceTree = "<group>"; };
@@ -65,7 +65,6 @@
 		E28536E724992B5700873378 /* CardsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsTableViewCell.swift; sourceTree = "<group>"; };
 		E287F5772502067A007A7BC6 /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
 		E2D0894825074D9900FBC6CE /* NavigationControllerPassingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerPassingContainer.swift; sourceTree = "<group>"; };
-		E2D089562507C31600FBC6CE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E2D089592507CA2400FBC6CE /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		E2E980FA2494CA9500A4B88C /* Translative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E980FD2494CA9500A4B88C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,7 +127,7 @@
 		E23D09BF24A88D2C00FE18CF /* Keys */ = {
 			isa = PBXGroup;
 			children = (
-				E23D09C024A88D7300FE18CF /* Keys.swift */,
+				E24A825725355E93008F22DE /* NetworkKeys.swift */,
 			);
 			path = Keys;
 			sourceTree = "<group>";
@@ -163,6 +162,7 @@
 		E28536B52497CB2500873378 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E28536B92497E4EB00873378 /* ModelController */,
 				E243863524C4B03D0082965C /* Core Data */,
 				E23D09BF24A88D2C00FE18CF /* Keys */,
 				E27C6E3F249BD9FA00B449F8 /* ApiModels */,
@@ -177,8 +177,6 @@
 			children = (
 				E2E980FD2494CA9500A4B88C /* AppDelegate.swift */,
 				E28536B82497E46100873378 /* NetworkController */,
-				E28536B92497E4EB00873378 /* ModelController */,
-				E28536BA2497E4FC00873378 /* ViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -186,6 +184,7 @@
 		E28536B72497D34B00873378 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E28536BA2497E4FC00873378 /* ViewController */,
 				E2E981012494CA9500A4B88C /* Main.storyboard */,
 				E2E981062494CAA200A4B88C /* LaunchScreen.storyboard */,
 			);
@@ -252,10 +251,9 @@
 		E2E980FC2494CA9500A4B88C /* Translative */ = {
 			isa = PBXGroup;
 			children = (
-				E2D089562507C31600FBC6CE /* README.md */,
-				E28536B62497CB2C00873378 /* Controllers */,
 				E28536B52497CB2500873378 /* Model */,
 				E28536B72497D34B00873378 /* View */,
+				E28536B62497CB2C00873378 /* Controllers */,
 				E2E981092494CAA200A4B88C /* Info.plist */,
 			);
 			path = Translative;
@@ -346,12 +344,12 @@
 				E23D09B224A6698F00FE18CF /* URLParameterEncoder.swift in Sources */,
 				E28536E2249926C700873378 /* TranslateViewController.swift in Sources */,
 				E287F5782502067A007A7BC6 /* PersistentContainer.swift in Sources */,
+				E24A825825355E93008F22DE /* NetworkKeys.swift in Sources */,
 				E23D09AA24A6621500FE18CF /* EndPointType.swift in Sources */,
 				E2D0895A2507CA2400FBC6CE /* CoreDataManager.swift in Sources */,
 				E2E980FE2494CA9500A4B88C /* AppDelegate.swift in Sources */,
 				E23D09AC24A6634400FE18CF /* HTTPMethod.swift in Sources */,
 				E23D09B024A666CA00FE18CF /* ParameterEncoding.swift in Sources */,
-				E23D09C124A88D7300FE18CF /* Keys.swift in Sources */,
 				E23D09BA24A6FD4300FE18CF /* GoogleCloudTranslationEndPoint.swift in Sources */,
 				E23D09B424A66E9700FE18CF /* JSONParameterEncoder.swift in Sources */,
 				E28536E624992AFD00873378 /* MainTableViewCell.swift in Sources */,
