@@ -9,13 +9,13 @@
 import UIKit
 import CoreData
 
-class NavigationController: UINavigationController {
+class NavigationControllerPassingContainer: UINavigationController {
 
-    var container: NSPersistentContainer!
+    var coreDataManager: CoreDataManager!
 
     override func viewDidLoad() {
         if let mainTableVC = self.topViewController as? MainTableViewController{
-            mainTableVC.container = self.container
+            mainTableVC.coreDataManager = self.coreDataManager
         }
     }
 

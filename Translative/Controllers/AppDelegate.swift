@@ -14,14 +14,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    let coreDataModel = "TranslativeModel"
+
     fileprivate let runCountNamespace = "runCount"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
         // Part of setup a Core Data Stack.
-        if let rootVC = window?.rootViewController as? NavigationController {
-            rootVC.container = persistentContainer
+        if let rootVC = window?.rootViewController as? NavigationControllerPassingContainer {
+
+            rootVC.coreDataManager = CoreDataManager(persistentContainer: persistentContainer)
         }
 
         handleRunCount()
@@ -68,7 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
          */
-        let container = NSPersistentContainer(name: "TranslativeModel")
+        let container = NSPersistentContainer(name: coreDataModel)
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.

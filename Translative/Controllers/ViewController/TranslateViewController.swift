@@ -16,7 +16,7 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var loadingProgress: UIProgressView!
 
     /// Постоянное хранилище Core Data.
-    var container: NSPersistentContainer!
+    var coreDataManager: CoreDataManager!
 
     var networkManager: NetworkManager!
 

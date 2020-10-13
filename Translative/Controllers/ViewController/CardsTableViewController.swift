@@ -12,7 +12,7 @@ import CoreData
 class CardsTableViewController: UITableViewController {
 
     /// Постоянное хранилище Core Data.
-    var container: NSPersistentContainer!
+    var coreDataManager: CoreDataManager!
     
     var indexOfLangGroup: Int!
     
@@ -107,7 +107,7 @@ class CardsTableViewController: UITableViewController {
             // Здесь объектом sender является ячейка, на которую нажимает пользователь.
 
             // Передаём ссылку на постоянное хранилище.
-            translateVC.container = container
+            translateVC.coreDataManager = coreDataManager
 
             // Здесь объектом sender является ячейка, на которую нажимает юзер
             // Получаем indexPath выбранной ячейки с помощью метода indexPathForCell:

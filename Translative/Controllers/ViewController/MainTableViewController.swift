@@ -11,16 +11,16 @@ import CoreData
 
 class MainTableViewController: UITableViewController {
 
-    var container: NSPersistentContainer!
+    var coreDataManager: CoreDataManager!
+    var context: NSManagedObjectContext!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        guard container != nil else {
-            fatalError("This view needs a persistent container!")
+        guard coreDataManager != nil else {
+            fatalError("This view needs a coreDataManager!")
         }
 
-        // The persistent container is available.
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -106,7 +106,7 @@ class MainTableViewController: UITableViewController {
             // Здесь объектом sender является ячейка, на которую нажимает пользователь.
 
             // Передаём ссылку на постоянное хранилище.
-            cardsVC.container = container
+            cardsVC.coreDataManager = coreDataManager
 
             // Получаем indexPath выбранной ячейки с помощью метода indexPathForCell:
             let indexPath = self.tableView.indexPath(for: (sender as! UITableViewCell))
