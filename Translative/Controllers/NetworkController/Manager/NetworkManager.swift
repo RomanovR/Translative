@@ -25,7 +25,7 @@ enum Result<String>{
 
 struct NetworkManager {
     static let environment: NetworkEnvironment = .basic
-    static let GoogleAPIKey = myGoogleAPIKey
+    static let GoogleAPIKey = NetworkKeys.googleDevKey
     private let router = Router<GoogleApi>()
 
     fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String>{
